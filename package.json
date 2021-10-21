@@ -1,0 +1,58 @@
+{
+	"name": "Blackjack",
+	"version": "0.0.0",
+	"license": "MIT",
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=10"
+	},
+	"scripts": {
+		"build": "babel src -d dist",
+		"start": "npm run build && node ./dist/index.js",
+		"play": "node ./dist/index.js",
+		"test": "jest --runInBand --coverage"
+	},
+	"dependencies": {
+		"import-jsx": "^4.0.0",
+		"ink": "^3.2.0",
+		"ink-big-text": "^1.2.0",
+		"ink-gradient": "^2.0.0",
+		"ink-select-input": "^4.2.0",
+		"react": "16.14"
+	},
+	"ava": {
+		"babel": true,
+		"require": [
+			"@babel/register"
+		]
+	},
+	"xo": {
+		"extends": "xo-react",
+		"rules": {
+			"react/prop-types": "off"
+		}
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.15.7",
+		"@babel/core": "^7.15.8",
+		"@babel/preset-env": "^7.15.8",
+		"@babel/preset-react": "^7.14.5",
+		"@babel/register": "^7.15.3",
+		"babel-jest": "^27.3.1",
+		"chalk": "^4.1.2",
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16.3": "^1.7.4",
+		"eslint-config-xo-react": "^0.25.0",
+		"eslint-plugin-react": "^7.26.1",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"ink-testing-library": "^2.1.0",
+		"jest": "^27.3.1",
+		"unicode-keymap": "^0.1.1",
+		"xo": "^0.39.1"
+	},
+	"jest": {
+		"setupFilesAfterEnv": [
+			"<rootDir>/setupTests.js"
+		]
+	}
+}
