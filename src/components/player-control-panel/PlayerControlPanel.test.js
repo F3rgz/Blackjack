@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import PlayerControlPanel from './PlayerControlPanel';
 import { render } from 'ink-testing-library';
 import keys from 'unicode-keymap';
-import gameOptions from '../player-options';
 
 describe('<PlayerControlPanel />', () => {
     describe('renders text and options correctly', () => {
@@ -59,6 +58,8 @@ describe('<PlayerControlPanel />', () => {
         });
     });
 
+    // Ran out of time before I could get use input woring
+    // however this would probably also be a good place to siply do Snapshot testing
     // describe('handles user input correctly', () => {
     //     it('should call handlePlayerInput when enter is selected', () => {
     //         const mockHandlePlayerInput = jest.fn();
